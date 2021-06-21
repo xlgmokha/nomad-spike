@@ -1,0 +1,6 @@
+
+alloc_id() {
+  ./bin/status-job | \
+    grep -A2 'Allocations' | \
+    tail -n1 | awk '{ print $1 }'
+}

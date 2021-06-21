@@ -3,5 +3,6 @@
 set -e
 
 cd "$(dirname "$0")/.."
+. ./bin/_common
 
-nomad alloc status "$(./bin/status-job | grep -A2 'Allocations' | tail -n1 | awk '{ print $1 }')"
+nomad alloc status "$alloc_id"
