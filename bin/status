@@ -4,4 +4,8 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+echo "\$ nnomad node status"
 nomad node status
+
+echo "\n$ nomad server members"
+nomad server members
